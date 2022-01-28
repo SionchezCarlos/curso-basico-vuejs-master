@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Curso Basico de Vue.js | Platzi</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app" v-bind:style="{ background: '#'+color }">
+  
+    <coin-detail 
+    v-on:change-color="UpdateColor"
+    v-bind:coin="btc">
+    
+    <template v-slot:text>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam autem quisquam accusamus perferendis quod illum dolor saepe eos sapiente sed rerum earum consequatur numquam necessitatibus vitae ea, possimus molestias officiis.</p>
+    </template>
+
+    <template v-slot:link>
+      <a href="#">Link!</a>
+    </template>
+  
+    </coin-detail>
+
+    <!-- Aparece en el dom -->
+    <!-- <span v-show="changePercent > 0">👍</span>
+    <span v-show="changePercent < 0">👎</span>
+    <span v-show="changePercent == 0">🤞</span> -->
+
+    <!-- for -->
+    <!-- <ul> -->
+      <!-- <li v-for="p in prices" v-bind:key="p">{{p}}</li> -->
+      
+      <!-- Donde i es el indice del elemento -->
+      <!-- <li v-for="(p, i) in prices" v-bind:key="p">{{i}} - {{p}}</li> -->
+    <!-- </ul> -->
+
+    <!-- <span v-on:click="toggleShowPrices">{{showPrices ? '🙈': '🐵'}}</span> -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
